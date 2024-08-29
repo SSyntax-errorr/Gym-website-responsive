@@ -1,0 +1,391 @@
+
+#gymname{
+    color: #D7FD52;
+}
+
+
+
+
+body {
+   
+    
+  font-weight: 400;
+  font-style: normal;
+    
+    padding: 0;
+    color: white;
+  font-family: "Stalinist One", sans-serif;
+  margin: 0;
+}
+
+button {
+    cursor: pointer;
+    
+}
+
+.navbar{
+    display: inline-block;
+    display: flex;
+    z-index: 1;
+    position: relative;
+    
+}
+
+.navbar ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+.navbar ul li {
+    display: inline-block; /* put items on the same line */
+    margin: 0 15px; /* space out those items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px;
+}
+
+
+.navbar ul li a:hover {
+    color: #ddd; 
+}
+
+.navbar ul li a:active {
+    color: #2cc650; 
+}
+
+#navigation {
+    flex: 2;
+    
+}
+
+#anchor{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
+/*make the navigation disappear when it can't fit the screen*/
+@media (max-width: 500px) {
+    #navigation {
+        display: none;
+        
+    }
+
+    .task{
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+
+}
+
+
+
+
+.task{
+    display:flex;
+    padding: 10px;
+    
+    #menuimg {
+        width: 30px; 
+        height: auto; 
+        display: block;
+    }
+
+    #searchimg{
+        width: 30px; 
+        height: auto; 
+        display: block;
+    }
+
+    #mailimg{
+        width: 30px; 
+        height: auto; 
+        display: block;
+    }
+}
+
+.options:hover {
+    cursor: pointer;
+}
+
+.padding {
+    color: transparent;
+}
+
+.badge {
+    position: relative;
+    top: -28px; 
+    right: -18px; 
+    background-color: red; 
+    color: white; 
+    border-radius: 50%; 
+    width: 15px; 
+    height: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; 
+    
+    user-select: none;
+}
+
+
+
+.home{
+    z-index: 1;
+    position: relative;
+}
+
+
+.firstsection {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 100%;
+    justify-content: flex-start;
+    
+    text-align: center;
+
+    flex-direction: column;
+
+    position: relative;
+    background-image: url('images/bg.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    /* z-index: 2; */
+    z-index: 2;
+    /* color: rgba(23, 32, 34, 0.818);  */
+    min-height: 450px;
+    
+}
+
+
+
+.firstsection::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 32, 34, 0.818);  
+    pointer-events: none; 
+    z-index: 0;
+}
+
+
+
+
+
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h5{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: large;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+
+
+button#startnow {
+    background-color: #D7FD52;
+    color: black;
+    font-size: medium;
+    
+    position: relative;
+    border-radius: 30px;
+    border-color: #D7FD52;
+    z-index: 1;
+    width: 200px;   
+    height: 50px;
+    transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
+    font-family: "Stalinist One", sans-serif;
+}
+
+
+
+button#startnow::after{
+    content: "";
+    z-index: -1;
+    background-color: #D7FD52;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(8px);
+    left: 0;
+    top:0;
+    border-radius: 20px;
+
+}
+
+
+
+#startnow:hover{
+    background-color: transparent;
+    border-color: #D7FD52;
+    color: white;
+    
+    
+    
+}
+
+#startnow:hover::after{
+    background-color: transparent;
+}
+
+
+button#learnmore{
+    background-color: transparent;
+    color: white;
+    
+    font-weight: bold;
+    border: none;
+    width: 200px;   
+    height: 50px;
+    font-size: medium;
+    font-family: "Stalinist One", sans-serif;
+}
+
+
+
+
+#pad{
+    width: 100%;
+    height: 150px;
+    background: transparent;
+}
+
+.scrollbanner {
+    width: 100%;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    
+    background: #D7FD52;
+    position: relative;
+    align-items: top;
+    justify-content: top;
+    
+    z-index: 1;
+    position: relative;
+
+
+}
+
+.bannertxt {
+    display: inline-block;
+    color: black;
+    
+    font-weight: bold;
+    font-size: medium;
+    align-items: center;
+    
+    animation: marquee 20s linear infinite;
+    position: absolute;
+    padding-bottom: 20%;
+    
+
+}
+
+.bannertxt h1 {
+    margin: 0;
+    padding: 0 2rem; 
+    color: red;
+    
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+@media (width <= 768px) {
+
+    .firstsection{
+        height: 60vh;
+    }
+
+    .home h1 {
+        font-size: 2em;
+    }
+
+    .home p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (width <= 480px) {
+    .home h1 {
+        font-size: 1.5em;
+    }
+
+    .home p {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (width <= 400px) {
+    .home h1 {
+        font-size: 1.5em;
+    }
+
+    .home p {
+        font-size: 0.9em;
+    }
+
+    .home h2 {
+        font-size: 1.3em;
+    }
+   
+} 
+
+@media ((width <= 500px) and (height >= 650px)){
+    .firstsection{
+        height: 50vh;
+    }
+}
+
+/*responsive for ipad*/
+@media ((width <= 800px) and (height >= 1000px)){
+    .firstsection{
+        height: 50vh;
+    }
+}
